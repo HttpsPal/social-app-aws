@@ -1,0 +1,114 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-socialapp-dev-215816-authRole",
+      "UnauthRoleArn": "arn:aws:iam::244960863842:role/amplify-socialapp-dev-215816-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::244960863842:role/amplify-socialapp-dev-215816-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-socialapp-dev-215816-deployment",
+      "UnauthRoleName": "amplify-socialapp-dev-215816-unauthRole",
+      "StackName": "amplify-socialapp-dev-215816",
+      "StackId": "arn:aws:cloudformation:us-east-1:244960863842:stack/amplify-socialapp-dev-215816/3490a3c0-50c0-11ec-95a3-0eae5f7c52eb",
+      "AmplifyAppId": "d159ksh2qlid42"
+    }
+  },
+  "auth": {
+    "socialapp": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "PREFERRED_USERNAME",
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_B6SpTKBf7",
+        "AppClientIDWeb": "derb779rpbtlem4j9omth7t0b",
+        "AppClientID": "4m42rbokjrio5u3d1ql4559cr7",
+        "IdentityPoolId": "us-east-1:687f1b62-5337-4988-980d-c4c012bce118",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:244960863842:userpool/us-east-1_B6SpTKBf7",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "socialapp"
+      },
+      "lastPushTimeStamp": "2021-11-29T05:55:59.205Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-socialapp-dev-215816-deployment/amplify-cfn-templates/auth/socialapp-cloudformation-template.json",
+        "logicalId": "authsocialapp"
+      }
+    }
+  },
+  "api": {
+    "socialapp": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authsocialapp"
+              }
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "vni7k5licbfxje3i4ksqq7w5g4",
+        "GraphQLAPIEndpointOutput": "https://rpj26attx5d6beuyhjtysg43nu.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-rqbl7u6awjgyji5ys2hmpgor7i"
+      },
+      "lastPushTimeStamp": "2021-11-29T05:55:59.206Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-socialapp-dev-215816-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apisocialapp"
+      },
+      "lastPushDirHash": "Ujpdtv95LEFzdyzYTIT+3j71f0c="
+    }
+  },
+  "storage": {
+    "s3socialappstoraged159ksh2qlid42": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "BucketName": "socialapp-storage-d159ksh2qlid42215816-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2021-11-29T05:55:59.207Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-socialapp-dev-215816-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3socialappstoraged159ksh2qlid42"
+      }
+    }
+  }
+}

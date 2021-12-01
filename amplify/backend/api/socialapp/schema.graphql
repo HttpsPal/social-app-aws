@@ -1,0 +1,26 @@
+type Community @model @auth(rules: [{allow: public, operations: [read]}, {allow: owner}, {allow: private, operations: [read, create]}, {allow: groups, groups: ["Admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  createdAt: AWSDateTime
+  title: String!
+  description: String!
+  owner: String!
+  Posts: [Post] @manyToMany(relationName: "CommunityPost")
+}
+
+type Comment @model @auth(rules: [{allow: public, operations: [read]}, {allow: owner}, {allow: private, operations: [read, create]}, {allow: groups, groups: ["Admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  createdAt: AWSDateTime
+  content: String!
+  posts: [Post] @manyToMany(relationName: "PostComment")
+}
+
+type Post @model @auth(rules: [{allow: public, operations: [read]}, {allow: owner}, {allow: private, operations: [read, create]}, {allow: groups, groups: ["Admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  createdAt: AWSDateTime
+  title: String!
+  content: String!
+  image: String
+  Comments: [Comment] @manyToMany(relationName: "PostComment")
+  communitys: [Community] @manyToMany(relationName: "CommunityPost")
+}
+ 

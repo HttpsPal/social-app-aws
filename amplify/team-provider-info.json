@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-socialapp-dev-215816-authRole",
+      "UnauthRoleArn": "arn:aws:iam::244960863842:role/amplify-socialapp-dev-215816-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::244960863842:role/amplify-socialapp-dev-215816-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-socialapp-dev-215816-deployment",
+      "UnauthRoleName": "amplify-socialapp-dev-215816-unauthRole",
+      "StackName": "amplify-socialapp-dev-215816",
+      "StackId": "arn:aws:cloudformation:us-east-1:244960863842:stack/amplify-socialapp-dev-215816/3490a3c0-50c0-11ec-95a3-0eae5f7c52eb",
+      "AmplifyAppId": "d159ksh2qlid42"
+    },
+    "categories": {
+      "auth": {
+        "socialapp": {}
+      }
+    }
+  }
+}
