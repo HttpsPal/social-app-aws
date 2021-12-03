@@ -8,9 +8,6 @@ import "../styles/index.css";
 Amplify.configure({
 	...awsconfig,
 	ssr: true,
-	DataStore: {
-		authModeStrategyType: AuthModeStrategyType.MULTI_AUTH,
-	},
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

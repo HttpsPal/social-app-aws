@@ -53,7 +53,7 @@ export declare class Comment {
   readonly id: string;
   readonly createdAt?: string;
   readonly content: string;
-  readonly posts?: (PostComment | null)[];
+  readonly posts?: PostComment[];
   readonly updatedAt?: string;
   constructor(init: ModelInit<Comment, CommentMetaData>);
   static copyOf(source: Comment, mutator: (draft: MutableModel<Comment, CommentMetaData>) => MutableModel<Comment, CommentMetaData> | void): Comment;

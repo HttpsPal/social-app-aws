@@ -36,6 +36,7 @@ const AuthProvider = ({ children }: AuthProps) => {
 			}
 		} catch (error) {
 			setUser(null);
+			console.error(error);
 		}
 	};
 

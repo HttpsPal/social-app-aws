@@ -51,7 +51,7 @@
         "IdentityPoolName": "testAuthIdentityPool__dev",
         "UserPoolName": "socialapp"
       },
-      "lastPushTimeStamp": "2021-11-29T05:55:59.205Z",
+      "lastPushTimeStamp": "2021-12-03T00:16:08.636Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-socialapp-dev-215816-deployment/amplify-cfn-templates/auth/socialapp-cloudformation-template.json",
         "logicalId": "authsocialapp"
@@ -87,12 +87,12 @@
         "GraphQLAPIEndpointOutput": "https://rpj26attx5d6beuyhjtysg43nu.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-rqbl7u6awjgyji5ys2hmpgor7i"
       },
-      "lastPushTimeStamp": "2021-11-29T05:55:59.206Z",
+      "lastPushTimeStamp": "2021-12-03T00:16:08.638Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-socialapp-dev-215816-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apisocialapp"
       },
-      "lastPushDirHash": "Ujpdtv95LEFzdyzYTIT+3j71f0c="
+      "lastPushDirHash": "Qb6PyI3jgDqjdhK+Er+VL1OJ7wE="
     }
   },
   "storage": {
@@ -104,7 +104,7 @@
         "BucketName": "socialapp-storage-d159ksh2qlid42215816-dev",
         "Region": "us-east-1"
       },
-      "lastPushTimeStamp": "2021-11-29T05:55:59.207Z",
+      "lastPushTimeStamp": "2021-12-03T00:16:08.639Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-socialapp-dev-215816-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storages3socialappstoraged159ksh2qlid42"

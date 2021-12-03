@@ -276,7 +276,7 @@ export const schema = {
                     "type": {
                         "model": "PostComment"
                     },
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": [],
                     "isArrayNullable": true,
                     "association": {
@@ -503,5 +503,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "dd02610f80121e2b0f5f9829c2f75cc5"
+    "version": "8a8be79cab6fe4b3e8194e21c47395b7"
 };

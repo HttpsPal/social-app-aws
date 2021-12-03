@@ -6,7 +6,7 @@ const Home: NextPage = () => {
 	return (
 		<div className="h-screen bg-purple-100 pt-1">
 			<Head>
-				<title>Social | Home</title>
+				<title>Giglet | Home</title>
 				<meta
 					name="description"
 					content="Full Stack website made with Next.js and AWS Amplify"
